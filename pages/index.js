@@ -3,7 +3,9 @@ import Head from "next/head";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Chats from "../components/Chats";
+import MessageInput from "../components/MessageInput";
 import Messages from "../components/Messages";
+import NewChat from "../components/NewChat";
 
 import { initialChats, initialMessages } from "../dummyData";
 import { chatActions } from "../store/chats-slice";
@@ -32,7 +34,10 @@ export default function Home() {
       </Head>
 
       <Chats />
+      <div>Messages begin here:</div>
       <Messages />
+      <MessageInput />
+      <NewChat />
       <h1>Hello from Vitalie Next</h1>
     </div>
   );

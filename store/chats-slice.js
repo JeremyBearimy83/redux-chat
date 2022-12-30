@@ -27,6 +27,7 @@ const chatsSlice = createSlice({
         chatId: uuid(),
       };
       state.chats.push(newChat);
+      state.currentChatId = newChat.chatId;
     },
     archiveChat(state, action) {
       const { chatId } = action.payload;

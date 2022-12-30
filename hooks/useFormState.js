@@ -5,7 +5,7 @@ const useFormState = (init) => {
 
   const handleChange = (e) => setVaue(e.currentTarget.value);
 
-  const handleReset = (e) => setVaue("");
+  const handleReset = () => setVaue("");
 
   return [value, handleChange, handleReset];
 };

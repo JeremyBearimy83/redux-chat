@@ -8,13 +8,18 @@ const messagesSlice = createSlice({
   reducers: {
     replaceMessages(state, action) {
       state.messages = action.payload;
+      console.log("hi i am state", state.messages);
     },
     addMessage(state, action) {
       const { chatId, messageText } = action.payload;
 
       const newMessage = { chatId, messageText, messageId: uuid() };
 
-      state.messages[chatId].push(newMessage);
+      if (!state.messages[chatId]) {
+        state.messages[chatId] = [newMessage];
+      } else {
+        state.messages[chatId].push(newMessage);
+      }
     },
   },
 });

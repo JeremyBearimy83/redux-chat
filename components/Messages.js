@@ -10,7 +10,7 @@ const Messages = () => {
   if (currentChatId === 0) return <div>No chat selected</div>;
 
   if (!allMessages[currentChatId]) {
-    return <div>Please select an appropriate chat</div>;
+    return <div>NO MESSAGES</div>;
   }
 
   return (
