@@ -19,7 +19,10 @@ const Chat = ({ chatId, name, handleChatChange, selectedChat }) => {
       <span className="chat-name">{name}</span>
 
       {lastMessage ? (
-        <div className="last-message">{lastMessage.messageText}</div>
+        <div className="last-message">
+          {lastMessage.messageText?.substring(0, 55)}
+          {lastMessage.messageText.length > 55 && <span>...</span>}
+        </div>
       ) : (
         <div className="last-message"> Type to chat </div>
       )}
