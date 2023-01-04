@@ -20,9 +20,14 @@ const MessageInput = () => {
   };
 
   return (
-    <div>
+    <div className="message-input-section">
       <form onSubmit={handleFormSubmit}>
-        <input type="text" value={messageText} onChange={handleMessageChange} />
+        <input
+          type="text"
+          value={messageText}
+          onChange={handleMessageChange}
+          className="message-input"
+        />
         <button type="submit">Send</button>
       </form>
     </div>

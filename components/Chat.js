@@ -4,17 +4,25 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const Chat = ({ chatId, name, handleChatChange }) => {
+const Chat = ({ chatId, name, handleChatChange, selectedChat }) => {
   const localMessages = useSelector((state) => state.messages.messages)[chatId];
   let lastMessage = "";
   if (localMessages) {
     lastMessage = localMessages[localMessages.length - 1];
   }
   return (
-    <div onClick={() => handleChatChange(chatId)} role="button">
-      <span>{name}</span>
+    <div
+      className={`chat ${selectedChat && "selected-chat"}`}
+      onClick={() => handleChatChange(chatId)}
+      role="button"
+    >
+      <span className="chat-name">{name}</span>
 
-      {lastMessage && <span>({lastMessage.messageText})</span>}
+      {lastMessage ? (
+        <div className="last-message">{lastMessage.messageText}</div>
+      ) : (
+        <div className="last-message"> Type to chat </div>
+      )}
     </div>
   );
 };

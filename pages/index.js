@@ -8,6 +8,8 @@ import Messages from "../components/Messages";
 import NewChat from "../components/NewChat";
 
 import { initialChats, initialMessages } from "../dummyData";
+import ChatSection from "../sections/ChatSection";
+import MessageSection from "../sections/MessageSection";
 import { chatActions } from "../store/chats-slice";
 import { messagesActions } from "../store/messages-slice";
 
@@ -33,12 +35,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Chats />
+      {/*
+  <Chats />
       <div>Messages begin here:</div>
       <Messages />
       <MessageInput />
       <NewChat />
       <h1>Hello from Vitalie Next</h1>
+  
+  */}
+
+      <div className="app">
+        <ChatSection />
+        <MessageSection />
+      </div>
     </div>
   );
 }
