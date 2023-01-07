@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import Head from "next/head";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { initialChats, initialMessages } from "../dummyData";
 import ChatSection from "../sections/ChatSection";

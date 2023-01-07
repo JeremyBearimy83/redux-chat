@@ -4,7 +4,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { chatActions } from "../store/chats-slice";
 import Chat from "./Chat";
-import NewChat from "./NewChat";
 
 const Chats = () => {
   const { chats: allChats } = useSelector((state) => state);
