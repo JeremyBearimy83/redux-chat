@@ -8,10 +8,28 @@
   }
 
   .chat-heading {
+    display: flex;
+    justify-content: space-between;
     font-size: 24px;
     padding: 0.5rem;
     font-weight: bold;
     border-bottom: 1px solid #dedede;
+    align-items: center;
+
+    .chat-input {
+      //   width: 90%;
+      //   height: ;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #dedede;
+      // margin-right: 4rem;
+      padding: 0.5rem;
+
+      &:focus {
+        outline: none;
+        border: 1px solid darkgray;
+      }
+    }
   }
 
   .chat {

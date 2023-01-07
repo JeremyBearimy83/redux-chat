@@ -21,8 +21,13 @@ const NewChat = () => {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input type="text" value={chatName} onChange={handleChatName} />
-        <button type="submit">Submit</button>
+        <input
+          type="text"
+          placeholder="New Chat"
+          value={chatName}
+          onChange={handleChatName}
+          className="chat-input"
+        />
       </form>
     </div>
   );
