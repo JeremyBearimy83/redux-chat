@@ -7,7 +7,7 @@ import Chat from "./Chat";
 import NewChat from "./NewChat";
 
 const Chats = () => {
-  const { chats: allChats, currentChatId } = useSelector((state) => state);
+  const { chats: allChats } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const handleChatChange = (chatId) => {

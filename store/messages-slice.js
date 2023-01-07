@@ -8,7 +8,6 @@ const messagesSlice = createSlice({
   reducers: {
     replaceMessages(state, action) {
       state.messages = action.payload;
-      console.log("hi i am state", state.messages);
     },
     addMessage(state, action) {
       const { chatId, messageText } = action.payload;
