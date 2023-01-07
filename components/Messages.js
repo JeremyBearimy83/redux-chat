@@ -12,13 +12,7 @@ const Messages = () => {
     lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  console.log("look at current chatId", currentChatId);
-
   if (currentChatId === 0) return <div>No chat selected</div>;
-
-  // if (!allMessages[currentChatId]) {
-  //   return <div ref={lastMessageRef}>NO MESSAGES</div>;
-  // }
 
   useEffect(() => {
     scrollToLastMessage();

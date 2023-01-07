@@ -10,8 +10,6 @@ const MessageTopBar = () => {
     allChats.archivedChats.find((ac) => ac.chatId === allChats.currentChatId) ||
     allChats.chats.find((c) => c.chatId === allChats.currentChatId);
 
-  console.log("Look at current chat", currentChat, currentChatId);
-
   if (currentChatId === 0) return <div>No chat selected</div>;
 
   if (!currentChat) {

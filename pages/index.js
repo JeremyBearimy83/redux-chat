@@ -10,18 +10,11 @@ import { chatActions } from "../store/chats-slice";
 import { messagesActions } from "../store/messages-slice";
 
 export default function Home() {
-  const allChats = useSelector((state) => state.chats);
-  const allMessages = useSelector((state) => state.messages);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(chatActions.replaceChats(initialChats));
     dispatch(messagesActions.replaceMessages(initialMessages));
   }, []);
-
-  useEffect(() => {
-    console.info("look at all chats", allChats);
-    console.info("look at all messages", allMessages);
-  });
 
   return (
     <div>
