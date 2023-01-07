@@ -1,0 +1,28 @@
+.message-section {
+  width: 70%;
+  background-color: white;
+  border: 1px solid #dedede;
+  margin-left: 1rem;
+  .message-top-bar {
+    font-size: 24px;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: #f4f4fc;
+  }
+
+  .message-list {
+    min-height: 83vh;
+    max-height: 83vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+    @import "./message-box.scss";
+  }
+
+  @import "./message-input.scss";
+}

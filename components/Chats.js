@@ -14,28 +14,17 @@ const Chats = () => {
     dispatch(chatActions.changeCurrentChat(chatId));
   };
 
-  console.log({ allChats, currentChatId });
-
   return (
     <div>
       <div className="chat-heading">Chats</div>
       <div className="all-chats">
         {allChats.archivedChats.map((c) => (
-          // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-          // <div
-          //   onClick={() => handleChatChange(c.chatId)}
-          //   key={c.chatId}
-          //   role="button"
-          // >
-          //   {c.name}
-          // </div>
-
           <Chat
             handleChatChange={handleChatChange}
             key={c.chatId}
             name={c.name}
             chatId={c.chatId}
-            selected={c.chatId === currentChatId}
+            selectedChat={c.chatId === allChats.currentChatId}
           />
         ))}
         {allChats.chats.map((c) => (
@@ -44,7 +33,7 @@ const Chats = () => {
             key={c.chatId}
             name={c.name}
             chatId={c.chatId}
-            selected={c.chatId === currentChatId}
+            selectedChat={c.chatId === allChats.currentChatId}
           />
         ))}
       </div>

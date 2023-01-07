@@ -1,0 +1,40 @@
+.message-input-section {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f4f4fc;
+
+  .send-form {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .message-input {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    // margin-right: 4rem;
+    padding: 0.5rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid darkgray;
+    }
+  }
+
+  .send-icon {
+    height: 18px;
+    width: 18px;
+  }
+
+  .send-btn {
+    background-color: white;
+    border: 1px solid #dedede;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+    }
+    border-radius: 10px;
+  }
+}

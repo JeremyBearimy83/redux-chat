@@ -1,4 +1,4 @@
-import "../styles/aplictation.scss";
+import "../styles/global.scss";
 // import PropTypes from "prop-types";
 import Head from "next/head";
 import React from "react";

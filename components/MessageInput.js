@@ -21,14 +21,22 @@ const MessageInput = () => {
 
   return (
     <div className="message-input-section">
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className="send-form">
         <input
           type="text"
           value={messageText}
           onChange={handleMessageChange}
           className="message-input"
+          placeholder="Type a message"
         />
-        <button type="submit">Send</button>
+        <button type="submit" className="send-btn">
+          Send
+          <image
+            className="send-icon"
+            alt="send"
+            src="/public/arrow-right.svg"
+          />
+        </button>
       </form>
     </div>
   );

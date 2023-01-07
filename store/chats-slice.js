@@ -8,7 +8,7 @@ const chatsSlice = createSlice({
   initialState: {
     archivedChats: [],
     chats: [],
-    currentChatId: 0,
+    currentChatId: 1,
   },
   reducers: {
     changeCurrentChat(state, action) {

@@ -7,10 +7,10 @@ const MessageTopBar = () => {
   const { chats: allChats, currentChatId } = useSelector((state) => state);
 
   const currentChat =
-    allChats.archivedChats.find((ac) => ac.chatId === currentChatId) ||
-    allChats.chats.find((c) => c.chatId === currentChatId);
+    allChats.archivedChats.find((ac) => ac.chatId === allChats.currentChatId) ||
+    allChats.chats.find((c) => c.chatId === allChats.currentChatId);
 
-  console.log("Look at current chat", currentChat);
+  console.log("Look at current chat", currentChat, currentChatId);
 
   if (currentChatId === 0) return <div>No chat selected</div>;
 
