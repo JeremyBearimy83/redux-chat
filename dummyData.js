@@ -46,4 +46,5 @@ export const initialChats = {
     },
   ],
   chats: [],
+  currentChatId: "1",
 };

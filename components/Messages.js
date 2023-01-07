@@ -18,6 +18,14 @@ const Messages = () => {
     scrollToLastMessage();
   });
 
+  if (!allMessages[currentChatId]?.length) {
+    return (
+      <div className="no-messages">
+        <span>No messages</span>
+      </div>
+    );
+  }
+
   return (
     <div className="message-list">
       {allMessages[currentChatId]?.map((m) => (

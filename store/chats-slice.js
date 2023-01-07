@@ -17,6 +17,7 @@ const chatsSlice = createSlice({
     replaceChats(state, action) {
       state.archivedChats = action.payload.archivedChats;
       state.chats = action.payload.chats;
+      state.currentChatId = action.payload.currentChatId;
     },
     addChat(state, action) {
       const { name, profilePic, lastMessage } = action.payload;

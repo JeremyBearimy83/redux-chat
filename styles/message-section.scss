@@ -12,6 +12,27 @@
     height: 5vh;
   }
 
+  .no-messages {
+    min-height: 85vh;
+    max-height: 85vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+
+    span {
+      background-color: #f4f4fc;
+      width: 90%;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 20px;
+    }
+  }
+
   .message-list {
     min-height: 85vh;
     max-height: 85vh;

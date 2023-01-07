@@ -16,10 +16,6 @@ const Chats = () => {
 
   return (
     <div>
-      <div className="chat-heading">
-        Chats
-        <NewChat />
-      </div>
       <div className="all-chats">
         {allChats.archivedChats.map((c) => (
           <Chat
